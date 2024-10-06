@@ -2,6 +2,11 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  // 如果您使用了图片优化功能,可能还需要添加以下配置
+  images: {
+    unoptimized: true,
+  },
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   // Optionally, add any other Next.js config below
