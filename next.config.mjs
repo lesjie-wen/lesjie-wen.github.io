@@ -2,7 +2,9 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',
+  output: 'export',
+  //assetPrefix: './', //'/lesjie-wen.github.io/',
+  //basePath: './', //'/lesjie-wen.github.io',
   images: {
     unoptimized: true,
   },

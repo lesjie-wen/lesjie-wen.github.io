@@ -1,12 +1,15 @@
 {
   "name": "academic-homepage-template",
+  "homepage": "https://lesjie-wen.github.io/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -t true",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-static": "next build && mv out build"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
@@ -34,11 +37,12 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.47",
     "raw-loader": "^4.0.2",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.13"
   }
 }
