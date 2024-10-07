@@ -17,8 +17,8 @@ if (isGithubActions) {
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: assetPrefix, //'/lesjie-wen.github.io/',
-  basePath: basePath, //'/lesjie-wen.github.io',
+  assetPrefix: '', //'/lesjie-wen.github.io/',
+  basePath: '', //'/lesjie-wen.github.io',
   images: {
     unoptimized: true,
   },
