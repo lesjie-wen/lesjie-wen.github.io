@@ -2,6 +2,9 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 
+let assetPrefix = '';
+let basePath = '';
+
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
@@ -11,8 +14,8 @@ if (isGithubActions) {
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: '', //'/lesjie-wen.github.io/',
-  basePath: '', //'/lesjie-wen.github.io',
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   images: {
     unoptimized: true,
   },
@@ -30,9 +33,7 @@ const withMDX = createMDX({
   // mdx config
 });
 
-
 const finalConfig = withMDX(nextConfig);
-
 
 export default () => {
   const env = process.env.NODE_ENV;
